@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <title>Menu</title>
+  </head>
+  <body>
+    <section class="menu">
+      <!-- title -->
+      <div class="title">
+        <h2>our menu</h2>
+        <div class="underline"></div>
+      </div>
+
+      <!-- filter btns -->
+
+      <div class="btn-container">
+        <button class="filter-btn" data-id="all" type="button">all</button>
+        <button class="filter-btn" data-id="breakfast" type="button">breakfast</button>
+        <button class="filter-btn" data-id="lunch" type="button">lunch</button>
+        <button class="filter-btn" data-id="shakes" type="button">shakes</button>
+      </div>
+
+      <!-- menu items -->
+      <div class="section-center">
+        <!-- single item -->
+
+        <atricle class="menu-item">
+          <img src="./images/food1.jpg" class="photo" alt="" />
+          <div class="item-info">
+            <header>
+              <h4>barbeque</h4>
+              <h4 class="price">$15</h4>
+            </header>
+            <p class="item-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio
+              quidem quod expedita minima facere repudiandae impedit, quaerat
+              saepe eius?
+            </p>
+          </div>
+        </atricle>
+      </div>
+    </section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
