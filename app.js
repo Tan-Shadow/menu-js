@@ -77,18 +77,11 @@ const sectionCenter = document.querySelector('.section-center')
 const filterBtns = document.querySelectorAll('.filter-btn')
 
 // load all items
-// here we are displaying all the items on the load
 window.addEventListener('DOMContentLoaded', () => {
     displayMenuItems(menu)
 })
 
 // filter items
-// now here we are taking each btn fron filter btns
-// and adding an eventListener to it 
-// we will see the dataset id of the btn that we have clicked
-// then we will filter out the elements from the menu by
-// looking if they have the category similar to the
-// dataset id of the btn we have clicked
 filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
         const category = e.currentTarget.dataset.id
@@ -98,17 +91,11 @@ filterBtns.forEach(function (btn) {
             }
         })
 
-
-        // if the btn we clicked has the dataset id of all
-        // then we willl call displaymenuitems with all the items
-        // there are in the menu item array  
+ 
         if (category === 'all') {
             displayMenuItems(menu)
         }
 
-        // else call the displaymenuitems function with only
-        // the categorized items that we have filtered
-        // through that have the same dataset id and category property 
         else {
             displayMenuItems(categorizedItems)
         }
@@ -116,12 +103,8 @@ filterBtns.forEach(function (btn) {
     })
 })
 
-// this is takin an array and setts the markup to some html  
 function displayMenuItems(menuItems) {
 
-    // maps over the menuItems array 
-    // makes a markup and replaces certain things with
-    // certain things
     let displayMenu = menuItems.map( item => {
         return `<atricle class="menu-item">
                     <img src="${item.img}" class="photo" alt="${item.title}" />
@@ -136,9 +119,6 @@ function displayMenuItems(menuItems) {
                     </div>
                 </atricle>`
     })
-    // now here we are taking the display menu array and joing it
-    // as we dont need those commas and  in our markup
     displayMenu = displayMenu.join('')
-    // we will add that html to our markup
     sectionCenter.innerHTML = displayMenu
 }
